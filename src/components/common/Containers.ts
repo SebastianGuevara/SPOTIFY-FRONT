@@ -37,9 +37,82 @@ padding: 8px 12px;
 box-sizing: border-box;
 border-radius: 8px;
 `
-export const PlaylistLibraryContainer = styled.div`
+export const LibraryContainer = styled.div`
 background-color: #121212;
 width: 100%;
 height: 100%;
 border-radius: 8px;
+overflow: hidden;
+box-sizing: border-box;
+`
+export const LibraryTitleContainer = styled.div`
+background-color: red;
+width: 100%;
+height: 56px;
+padding: 8px 16px;
+box-sizing: border-box;
+`
+export const LibraryButtonsContainer = styled.div`
+background-color: pink;
+width: 100%;
+height: 48px;
+box-sizing: border-box;
+`
+export const LibraryContentContainer = styled.div`
+
+width: 100%;
+height: 85%;
+overflow-y: scroll;
+transition: 0.5s;
+padding: 0px 0px 0px 8px;
+box-sizing: border-box;
+&::-webkit-scrollbar{
+    width: 13px;
+    background-color: transparent;
+    transition: 0.5s;
+    position: absolute;
+}
+&::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+&:hover{
+    &::-webkit-scrollbar-thumb{
+        background-color: rgba(255,255,255,0.35);
+    }
+}
+`
+
+export const LibrarySearchContainer = styled.div`
+background-color: blue;
+width: 100%;
+height: 34px;
+padding: 2px 8px 0px;
+box-sizing: border-box;
+`
+export const LibraryPlaylistSidebarContainer = styled.div`
+background-color: transparent;
+height: 64px;
+width: 100%;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 8px;
+box-sizing: border-box;
+gap: 12px;
+
+&:hover{
+    background-color: #232323;
+    border-radius: 8px;
+}
+`
+export const LibraryPlaylistSidebarTextContainer = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
 `

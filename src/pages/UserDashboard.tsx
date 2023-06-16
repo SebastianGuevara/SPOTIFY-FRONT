@@ -1,5 +1,6 @@
-import { DashboardContentContainer, DashboardPlaylistContainer, PlaylistLibraryContainer, SidebarContainer } from '../components/common/Containers'
+import { DashboardContentContainer, DashboardPlaylistContainer, SidebarContainer } from '../components/common/Containers'
 import Header from '../components/features/Header';
+import Library from '../components/features/PlaylistLibrary';
 import { HeaderLocationType } from '../types/HeaderTypes';
 
 const UserDashboard: React.FC = () =>{
@@ -8,9 +9,7 @@ const UserDashboard: React.FC = () =>{
         <DashboardContentContainer>
             <SidebarContainer>
                 <Header location= {HEADER_LOCATION}/>
-                <PlaylistLibraryContainer>
-                    
-                </PlaylistLibraryContainer>
+                <Library/>
 
             </SidebarContainer>
             <DashboardPlaylistContainer>
@@ -19,5 +18,4 @@ const UserDashboard: React.FC = () =>{
         </DashboardContentContainer>
     )
 }
-
 export default UserDashboard;
