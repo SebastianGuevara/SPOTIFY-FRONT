@@ -2,12 +2,13 @@ import { DashboardContentContainer, DashboardPlaylistContainer, PlaylistLibraryC
 import Header from '../components/features/Header';
 import { HeaderLocationType } from '../types/HeaderTypes';
 
-const UserDashboard: React.FC = () =>{
-    const HEADER_LOCATION: HeaderLocationType = "Home";
+
+const UserSearchDashboard: React.FC = () =>{
+    const HEADER_LOCATION: HeaderLocationType = "Search";
     return(
         <DashboardContentContainer>
             <SidebarContainer>
-                <Header location= {HEADER_LOCATION}/>
+                <Header location={HEADER_LOCATION}/>
                 <PlaylistLibraryContainer>
                     
                 </PlaylistLibraryContainer>
@@ -20,4 +21,4 @@ const UserDashboard: React.FC = () =>{
     )
 }
 
-export default UserDashboard;
+export default UserSearchDashboard
