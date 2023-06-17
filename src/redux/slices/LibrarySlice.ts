@@ -4,7 +4,8 @@ import { Library } from "../../types/PlaylistLibraryTypes";
 
 
 const initialState: Library ={
-    filterStatus: 'Recent'
+    filterStatus: 'Recent',
+    buttonsStatus: 'None'
 }
 
 export const librarySlice = createSlice({
@@ -14,9 +15,13 @@ export const librarySlice = createSlice({
         changeFilterStatus: (state, action) =>{
             const { status } = action.payload;
             state.filterStatus = status;
+        },
+        changeButtonsStatus: (state, action) =>{
+            const { status } = action.payload;
+            state.buttonsStatus = status;
         }
     }
 })
 
-export const {changeFilterStatus} = librarySlice.actions;
+export const {changeFilterStatus, changeButtonsStatus} = librarySlice.actions;
 export default librarySlice.reducer;

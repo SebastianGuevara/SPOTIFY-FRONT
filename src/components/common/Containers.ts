@@ -49,16 +49,27 @@ overflow: hidden;
 box-sizing: border-box;
 `
 export const LibraryTitleContainer = styled.div`
-background-color: red;
 width: 100%;
 height: 56px;
-padding: 8px 16px;
+padding: 8px 12px;
 box-sizing: border-box;
+font-size: 1rem;
+font-weight: 700;
+color: ${props => props.color};
+display:flex;
+align-items: center;
+justify-content: flex-start;
+gap: 20px;
 `
 export const LibraryButtonsContainer = styled.div`
-background-color: pink;
 width: 100%;
 height: 48px;
+box-sizing: border-box;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+gap: 8px;
+padding: 16px;
 box-sizing: border-box;
 `
 export const LibraryContentContainer = styled.div`

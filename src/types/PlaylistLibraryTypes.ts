@@ -2,6 +2,9 @@ export type SearchBoxWidth = {
   width: string;
 }
 export type FilterStatus = 'Recent' | 'RecentAdded' | 'Alfabetically' | 'Creator';
+export type ButtonsStatus = 'None' | 'Playlists' | 'Artists' | 'Albums';
+
 export type Library ={
-    filterStatus: 'Recent' | 'RecentAdded' | 'Alfabetically' | 'Creator';
+    filterStatus: 'Recent' | 'RecentAdded' | 'Alfabetically' | 'Creator',
+    buttonsStatus: 'None' | 'Playlists' | 'Artists' | 'Albums'
 } 

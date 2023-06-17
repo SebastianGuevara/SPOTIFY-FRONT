@@ -16,7 +16,7 @@ const LibrarySearchBox = () =>{
     const inputSearchBoxRef = useRef<HTMLInputElement|null>(null);
     const listFilterRef = useRef<HTMLUListElement|null>(null);
     const dispatch = useDispatch();
-    const library = useSelector(state => state.library);
+    const library = useSelector((state:any) => state.library);
 
     const handleSearchBoxClick = ():void =>{
         setSearchBoxIsActive(!searchBoxIsActive);

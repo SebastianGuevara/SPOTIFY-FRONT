@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { ButtonsProps } from "../../interfaces/PlaylistLibraryProps"
+import Library from "../features/PlaylistLibrary"
 
 export const HeaderContentButton = styled.button`
 width:100%;
@@ -66,4 +68,42 @@ cursor: pointer;
     color: white;
     border-radius: 5px 0px 0px 5px;
 }
+`
+export const LibraryButton = styled.button`
+border:none;
+width: 76px;
+border-radius: 999px;
+height: 32px;
+padding: 4px 12px 4px 12px;
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.9rem;
+font-weight: 500;
+cursor: pointer;
+transition: 0.3s;
+background-color: #232323;
+color: #FFFFFF;
+
+&:hover{
+    background-color: #2A2A2A;
+}
+`
+export const SelectedLibraryButton = styled(LibraryButton)`
+background-color: #FFFFFF;
+color: #000000;
+font-weight: 400;
+&:hover{
+    background-color: #FFFFFF;
+}
+`
+export const LibraryXButton = styled(LibraryButton)`
+padding: 8px;
+height: 32px;
+width: 32px;
+justify-content: center;
+align-items: center;
+color: #6B6B6B;
+
 `
