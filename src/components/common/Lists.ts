@@ -11,6 +11,7 @@ box-sizing: border-box;
 font-weight: 450;
 transition: 0.1s;
 border-radius: 5px;
+color: ${props=>props.color};
 
 &:hover{
     background-color: #3E3E3E;
@@ -20,6 +21,7 @@ export const TitleLibraryFilterList = styled(LibraryFilterList)`
 font-size: 0.7rem;
 color: #b3b3b3;
 font-weight: 700;
+
 
 &:hover{
     background-color: transparent;
