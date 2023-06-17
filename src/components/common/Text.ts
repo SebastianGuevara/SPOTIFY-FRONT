@@ -6,5 +6,12 @@ color: #FFFFFF;
 `
 export const LibraryContentSubtitleText = styled.span`
 font-size: 0.9rem;
-color: #9D9D9D;
+color: #A7A7A7;
+`
+export const LibraryFilterText = styled.span`
+white-space: nowrap;
+overflow: hidden;
+text-overflow:ellipsis;
+width: 100%;
+text-align: end;
 `

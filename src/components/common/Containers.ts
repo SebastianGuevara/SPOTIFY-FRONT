@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import { SearchBoxWidth } from "../../types/PlaylistLibraryTypes"
+import styled from "styled-components"
 
 export const PrincipalContainer = styled.body`
 width: 100vw;
@@ -18,14 +19,16 @@ gap: 8px;
 
 export const SidebarContainer = styled.aside`
 height: 100%;
-width: 35%;
+max-width: 420px;
+min-width: 360px;
+width: 22%;
 display: flex;
 flex-direction: column;
 gap: 8px;
 `
 export const DashboardPlaylistContainer = styled.div`
 background-color: #121212;
-width: 65%;
+width: 78%;
 height: 100%;
 border-radius: 8px;
 `
@@ -85,11 +88,15 @@ box-sizing: border-box;
 `
 
 export const LibrarySearchContainer = styled.div`
-background-color: blue;
 width: 100%;
 height: 34px;
 padding: 2px 8px 0px;
 box-sizing: border-box;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+position: relative;
+margin-bottom: 8px;
 `
 export const LibraryPlaylistSidebarContainer = styled.div`
 background-color: transparent;
@@ -116,3 +123,29 @@ flex-direction: column;
 align-items: flex-start;
 justify-content: center;
 `
+export const LibrarySearchBoxContainer= styled.div<SearchBoxWidth>`
+background-color: ${props => props.color};
+height: 100%;
+width: ${props => props.width};
+border-radius: 0px 5px 5px 0px;
+transition: 0.3s;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+` 
+export const LibraryFilterUnflodedContainer = styled.ul`
+background-color: #282828;
+height: 208px;
+width: 203px;
+border-radius: 5px;
+position: absolute;
+top: 100%;
+right: 8px;
+margin: 0;
+list-style: none;
+color: white;
+cursor: default;
+padding: 4px;
+box-sizing: border-box;
+`
+

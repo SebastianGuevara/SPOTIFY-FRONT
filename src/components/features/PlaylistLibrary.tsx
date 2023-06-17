@@ -1,7 +1,12 @@
-import { LibraryButtonsContainer, LibraryContainer, LibraryContentContainer, LibrarySearchContainer, LibraryTitleContainer } from "../common/Containers"
+import { LibraryButtonsContainer, LibraryContainer, LibraryContentContainer, LibraryTitleContainer } from "../common/Containers"
 import LibraryPlaylistSidebar from "./LibraryPlaylistSidebar";
+import LibrarySearchBox from "./LibrarySearchBox";
+
 
 const Library: React.FC = () =>{
+
+
+
     return(
         <LibraryContainer>
             <LibraryTitleContainer>
@@ -10,10 +15,8 @@ const Library: React.FC = () =>{
             <LibraryButtonsContainer>
 
             </LibraryButtonsContainer>
+            <LibrarySearchBox/>
             <LibraryContentContainer>
-                <LibrarySearchContainer>
-
-                </LibrarySearchContainer>
                 <LibraryPlaylistSidebar/>
                 <LibraryPlaylistSidebar/>
                 <LibraryPlaylistSidebar/>
