@@ -27,3 +27,9 @@ font-weight: 700;
     background-color: transparent;
 }
 `
+
+export const LibraryPlusList = styled(LibraryFilterList)`
+font-size: 0.75rem;
+font-weight: 700;
+gap: 8px;
+`

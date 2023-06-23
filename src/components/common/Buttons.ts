@@ -19,7 +19,7 @@ outline: none;
 border: none;
 cursor: pointer;
 transition: 0.5s;
-
+position: relative;
 &:hover{
 color: #FFFFFF;
 }
@@ -38,7 +38,7 @@ font-size: 0.8rem;
 font-weight: 650;
 cursor: pointer;
 position: absolute;
-right:0;
+right:8px;
 margin: 0px 0px 0px 8px;
 padding: 0px 8px 0px 12px;
 transition: 0.3s;

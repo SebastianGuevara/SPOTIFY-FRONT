@@ -14,4 +14,5 @@ overflow: hidden;
 text-overflow:ellipsis;
 width: 100%;
 text-align: end;
+
 `

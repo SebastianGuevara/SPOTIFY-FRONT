@@ -1,19 +1,19 @@
 import { DashboardContentContainer, DashboardPlaylistContainer, SidebarContainer } from '../components/common/Containers'
 import Header from '../components/features/Header';
 import Library from '../components/features/PlaylistLibrary';
-import { HeaderLocationType } from '../types/HeaderTypes';
+import { useLocation } from 'react-router-dom';
 
 const UserDashboard: React.FC = () =>{
-    const HEADER_LOCATION: HeaderLocationType = "Home";
+    const location = useLocation();
+
     return(
         <DashboardContentContainer>
             <SidebarContainer>
-                <Header location= {HEADER_LOCATION}/>
+                <Header location = {location.pathname}/>
                 <Library/>
-
             </SidebarContainer>
             <DashboardPlaylistContainer>
-
+            
             </DashboardPlaylistContainer>
         </DashboardContentContainer>
     )

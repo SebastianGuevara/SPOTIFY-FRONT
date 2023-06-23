@@ -158,5 +158,10 @@ color: white;
 cursor: default;
 padding: 4px;
 box-sizing: border-box;
+z-index: 2;
 `
-
+export const LibraryPlusUnfoldedContainer = styled(LibraryFilterUnflodedContainer)`
+right: 0;
+height: 88px;
+width: 208px;
+`

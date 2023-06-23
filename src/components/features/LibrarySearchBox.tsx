@@ -42,7 +42,7 @@ const LibrarySearchBox = () =>{
                 <LibrarySearchBoxInput ref={inputSearchBoxRef} placeholder="Buscar en tu Biblioteca" onBlur={()=>setSearchBoxIsActive(false)}/>
             </LibrarySearchBoxContainer>    
             <LibraryFilterButton onClick={()=>handleFilterButtonClick()}>
-                <LibraryFilterText>Recientes</LibraryFilterText>
+                <LibraryFilterText>{library.filterStatus}</LibraryFilterText>
                 {!isFilterButtonActive?<Icon icon="teenyicons:down-solid" height="16px"/>:
                 <Icon icon="teenyicons:up-solid" height="16px"/>}
                 {isFilterButtonActive?
