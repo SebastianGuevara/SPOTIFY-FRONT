@@ -7,6 +7,7 @@ height: 100vh;
 display: flex;
 justify-content: center;
 align-items: flex-start;
+background-color: ${props => props.color?props.color:'#000000'};
 `
 export const DashboardContentContainer = styled.main`
 width: 100%;
@@ -164,4 +165,14 @@ export const LibraryPlusUnfoldedContainer = styled(LibraryFilterUnflodedContaine
 right: 0;
 height: 88px;
 width: 208px;
+`
+export const NotFoundContainer = styled.div`
+height: 100%;
+width: 100%;
+background-color: #121212;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: #FFFFFF;
 `

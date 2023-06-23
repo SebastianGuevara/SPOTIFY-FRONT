@@ -1,6 +1,4 @@
 import styled from "styled-components"
-import { ButtonsProps } from "../../interfaces/PlaylistLibraryProps"
-import Library from "../features/PlaylistLibrary"
 
 export const HeaderContentButton = styled.button`
 width:100%;
@@ -105,5 +103,20 @@ width: 32px;
 justify-content: center;
 align-items: center;
 color: #6B6B6B;
+`
+export const NotFoundButton = styled.button`
+width: 107px;
+height: 50px;
+padding: 12px 32px;
+margin: 0px 0px 36px;
+border-radius: 999px;
+font-family: Circular;
+font-weight: 600;
+border: none;
+cursor: pointer;
+box-sizing: border-box;
 
+&:hover{
+    transform: scale(1.02);
+}
 `

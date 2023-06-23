@@ -5,3 +5,7 @@ export const LibraryPlaylistImage = styled.img`
     width: auto;
     border-radius: 3px;
 `
+export const NotFoundLogo = styled.img`
+height: 60px;
+width: 60px;
+`

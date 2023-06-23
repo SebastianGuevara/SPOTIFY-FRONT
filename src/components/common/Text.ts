@@ -14,5 +14,7 @@ overflow: hidden;
 text-overflow:ellipsis;
 width: 100%;
 text-align: end;
-
+`
+export const NotFountSubTitle = styled.span`
+margin: 0px 0px 40px;
 `
