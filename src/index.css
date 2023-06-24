@@ -37,5 +37,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   align-items: flex-start;
+  -webkit-user-drag: none; 
 }
 

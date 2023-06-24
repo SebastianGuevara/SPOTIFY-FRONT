@@ -14,9 +14,9 @@ const UserDashboard: React.FC = () =>{
             navigate('/login');
         }
     },[])
+
     return(
         <DashboardContentContainer>
-            <button onClick={()=>console.log(auth)}>test</button>
             <SidebarContainer>
                 <Header location = {location.pathname}/>
                 <Library/>

@@ -1,15 +1,17 @@
 import { LibraryPlaylistSidebarContainer, LibraryPlaylistSidebarTextContainer } from "../common/Containers"
 import { LibraryPlaylistImage } from "../common/Images";
 import PlaceholderImage1 from "../../assets/placeholder1.png"
+import { LibraryPlaylistSidebarType } from "../../types/PlaylistLibraryTypes";
 import { LibraryContentSubtitleText, LibraryContentTitleText } from "../common/Text";
 
-const LibraryPlaylistSidebar = () =>{
+const LibraryPlaylistSidebar = (props:LibraryPlaylistSidebarType) =>{
+    const { imgSrc, title, subTitle } = props;
     return (
         <LibraryPlaylistSidebarContainer>
-            <LibraryPlaylistImage alt="Playlist image" src={PlaceholderImage1}/>
+            <LibraryPlaylistImage alt="Playlist image" src={(imgSrc)?imgSrc:PlaceholderImage1}/>
             <LibraryPlaylistSidebarTextContainer>
-                <LibraryContentTitleText>Tus me gusta</LibraryContentTitleText>
-                <LibraryContentSubtitleText>Lista · 485 canciones</LibraryContentSubtitleText>   
+                <LibraryContentTitleText>{title}</LibraryContentTitleText>
+                <LibraryContentSubtitleText>{subTitle}</LibraryContentSubtitleText>   
             </LibraryPlaylistSidebarTextContainer>
         </LibraryPlaylistSidebarContainer>
     )

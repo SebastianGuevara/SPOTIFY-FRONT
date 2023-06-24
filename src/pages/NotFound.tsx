@@ -1,4 +1,4 @@
-import { NotFoundContainer, PrincipalContainer } from "../components/common/Containers"
+import { NotFoundContainer } from "../components/common/Containers"
 import { NotFoundLogo } from "../components/common/Images"
 import LOGO from "../assets/notFoundLogo.svg"
 import { NotFoundButton } from "../components/common/Buttons"

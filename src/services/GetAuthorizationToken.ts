@@ -28,7 +28,7 @@ export const refreshAccessToken = async (refreshToken: String ) =>{
   return fetch(`https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=${refreshToken}`, requestOptions)
   .then(response => response.text())
   .then(result => {
-    return JSON.parse(result).access_token
+    return {newAccessToken: JSON.parse(result).access_token}
   })
   .catch(error => console.error(error));
 }
