@@ -17,6 +17,7 @@ const UserDashboard: React.FC = () =>{
 
     return(
         <DashboardContentContainer>
+            <button onClick={()=>console.log(auth)}>test</button>
             <SidebarContainer>
                 <Header location = {location.pathname}/>
                 <Library/>

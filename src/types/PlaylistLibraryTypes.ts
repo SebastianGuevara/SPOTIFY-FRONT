@@ -8,3 +8,9 @@ export type Library ={
     filterStatus: 'Recent' | 'RecentAdded' | 'Alfabetically' | 'Creator',
     buttonsStatus: 'None' | 'Playlists' | 'Artists' | 'Albums'
 } 
+
+export type LibraryPlaylistSidebarType ={
+  imgSrc: String,
+  title: String,
+  subTitle: String
+}
