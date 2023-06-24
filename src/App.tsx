@@ -1,4 +1,5 @@
 import { PrincipalContainer } from "./components/common/Containers"
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import UserDashboard from "./pages/UserDashboard"
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -11,6 +12,7 @@ function App() {
     <PrincipalContainer>
       <Router>
         <Routes>
+          <Route path="/login" element={<Login/>}/>
           <Route path="/search" element={<UserDashboard/>}/>
           <Route path="/" element={<UserDashboard/>}/>
           <Route path="*" element={<NotFound/>}/>
