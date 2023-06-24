@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 const UserDashboard: React.FC = () =>{
     const location = useLocation();
     const auth = useSelector((state:any) => state.authentication);
+    const user = useSelector((state:any)=>state.user);
     const navigate = useNavigate();
     useEffect(()=>{
         if(!auth.accessToken){

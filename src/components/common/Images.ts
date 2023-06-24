@@ -5,6 +5,7 @@ height: 50px;
 width: 50px;
 border-radius: 3px;
 user-select: none;
+object-fit: cover;
 `
 export const LibraryArtistsImage:any = styled(LibraryPlaylistImage)`
 border-radius: 999px;

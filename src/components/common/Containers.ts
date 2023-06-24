@@ -74,10 +74,10 @@ padding: 16px;
 box-sizing: border-box;
 `
 export const LibraryContentContainer = styled.div`
-
 width: 100%;
-height: 85%;
 overflow-y: scroll;
+height: 79%;
+
 transition: 0.5s;
 padding: 0px 0px 0px 8px;
 box-sizing: border-box;

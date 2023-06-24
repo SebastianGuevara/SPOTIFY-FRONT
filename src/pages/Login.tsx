@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import { getAuthorizationToken } from '../services/GetAuthorizationToken';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setAccessAndRefreshTokens } from '../redux/slices/AuthenticationSlice';
+import { setAccessAndRefreshTokens, setNewAccesToken } from '../redux/slices/AuthenticationSlice';
+import { getUserData } from '../services/GetUserData';
+import { setUserData } from '../redux/slices/UserSlice';
 const Login:React.FC = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -16,6 +18,7 @@ const Login:React.FC = () => {
                 if(JSON.parse(result).access_token){
                     const { access_token, refresh_token } = JSON.parse(result);
                     dispatch(setAccessAndRefreshTokens({accessToken: access_token, refreshToken: refresh_token}));
+                    handleGetUserData(access_token, refresh_token);
                     navigate('/');
                 }
             })
@@ -25,6 +28,18 @@ const Login:React.FC = () => {
             window.location.href = SPOTIFY_GRANT_CODE_URL;
         }
     },[])
+
+    const handleGetUserData = async (accessToken:String, refreshToken:String)=>{
+        const user = await getUserData(accessToken, refreshToken);
+        if('newAccessToken' in user){
+            dispatch(setNewAccesToken({accessToken: user.newAccessToken}))
+            handleGetUserData(user.newAccessToken, refreshToken);
+        }
+        else{
+            const { id,display_name,email,followers,images } = await getUserData(accessToken, refreshToken);
+            dispatch(setUserData({id: id, name: display_name, email: email, followers: followers.total, image:images[0].url}));
+        }
+    }
     return(
         <>
         </>
