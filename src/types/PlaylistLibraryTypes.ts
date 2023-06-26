@@ -10,7 +10,8 @@ export type Library ={
 } 
 
 export type LibraryPlaylistSidebarType ={
-  imgSrc: String,
-  title: String,
-  subTitle: String
+  imgSrc: String | null,
+  title: String ,
+  subTitle: String,
+  addedAt?: String
 }
