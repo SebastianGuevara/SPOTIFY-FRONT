@@ -18,6 +18,7 @@ border: none;
 cursor: pointer;
 transition: 0.5s;
 position: relative;
+text-decoration: none;
 &:hover{
 color: #FFFFFF;
 }

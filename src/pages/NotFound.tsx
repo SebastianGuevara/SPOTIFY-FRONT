@@ -2,7 +2,7 @@ import { NotFoundContainer } from "../components/common/Containers"
 import { NotFoundLogo } from "../components/common/Images"
 import LOGO from "../assets/notFoundLogo.svg"
 import { NotFoundButton } from "../components/common/Buttons"
-import { NotFountSubTitle } from "../components/common/Text"
+import { HelpNotFountText, NotFountSubTitle } from "../components/common/Text"
 import { Link } from "react-router-dom"
 
 const NotFound: React.FC = () => {
@@ -15,7 +15,7 @@ const NotFound: React.FC = () => {
             <Link to="/">
                 <NotFoundButton>Inicio</NotFoundButton>
             </Link>
-            <a href={SPOTIFY_SUPPORT_LINK}>Ayuda</a>
+            <HelpNotFountText href={SPOTIFY_SUPPORT_LINK}>Ayuda</HelpNotFountText>
         </NotFoundContainer>
     )
 }

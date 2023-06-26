@@ -18,3 +18,9 @@ text-align: end;
 export const NotFountSubTitle = styled.span`
 margin: 0px 0px 40px;
 `
+
+export const HelpNotFountText = styled.a`
+&:hover{
+    text-decoration: underline;
+}
+`
