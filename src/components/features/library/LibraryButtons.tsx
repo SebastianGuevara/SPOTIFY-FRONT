@@ -1,9 +1,9 @@
-import { LibraryButtonsContainer } from "../common/Containers"
-import { LibraryButton, LibraryXButton, SelectedLibraryButton } from "../common/Buttons"
+import { LibraryButtonsContainer } from "../../common/Containers"
+import { LibraryButton, LibraryXButton, SelectedLibraryButton } from "../../common/Buttons"
 import { useDispatch, useSelector } from "react-redux"
-import { changeButtonsStatus } from "../../redux/slices/LibrarySlice"
-import { ButtonsStatus } from "../../types/PlaylistLibraryTypes"
-import { LibraryIcon } from "../common/Icons"
+import { changeButtonsStatus } from "../../../redux/slices/LibrarySlice"
+import { ButtonsStatus } from "../../../types/PlaylistLibraryTypes"
+import { LibraryIcon } from "../../common/Icons"
 const LibraryButtons: React.FC = () => {
     const dispatch = useDispatch();
     const library = useSelector((state:any)=>state.library);

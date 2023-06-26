@@ -1,4 +1,4 @@
-import { LibraryContainer } from "../common/Containers"
+import { LibraryContainer } from "../../common/Containers";
 import LibraryButtons from "./LibraryButtons";
 import LibraryContent from "./LibraryContent";
 import LibrarySearchBox from "./LibrarySearchBox";

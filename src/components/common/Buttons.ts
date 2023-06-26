@@ -121,3 +121,28 @@ box-sizing: border-box;
     transform: scale(1.02);
 }
 `
+
+export const BackButton = styled.button`
+height: 32px;
+width: 32px;
+background-color: rgba(0,0,0,0.75);
+border: none;
+border-radius: 999px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #FFFFFF;
+`
+
+export const ProfileButton = styled(BackButton)`
+position: absolute;
+right: 20px;
+padding: 4px;
+box-sizing: border-box;
+background-color: rgba(0,0,0,0.6);
+&:hover{
+    scale: 1.05;
+    background-color: rgba(0,0,0,0.75);
+}
+`

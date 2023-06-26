@@ -1,15 +1,15 @@
-import { LibrarySearchContainer, LibrarySearchBoxContainer, LibraryFilterUnflodedContainer } from "../common/Containers"
-import { LibraryFilterButton, LibrarySearchIconButton } from "../common/Buttons"
+import { LibrarySearchContainer, LibrarySearchBoxContainer, LibraryFilterUnflodedContainer } from "../../common/Containers"
+import { LibraryFilterButton, LibrarySearchIconButton } from "../../common/Buttons"
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { LibraryIcon, LibraryCheckIcon } from "../common/Icons"
-import { LibraryFilterText } from "../common/Text"
-import { LibrarySearchBoxInput } from "../common/Inputs"
+import { LibraryIcon, LibraryCheckIcon } from "../../common/Icons"
+import { LibraryFilterText } from "../../common/Text"
+import { LibrarySearchBoxInput } from "../../common/Inputs"
 import { useState, useRef } from "react"
 import OutsideClickHandler from 'react-outside-click-handler';
-import { LibraryFilterList, TitleLibraryFilterList } from "../common/Lists"
+import { LibraryFilterList, TitleLibraryFilterList } from "../../common/Lists"
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilterStatus } from "../../redux/slices/LibrarySlice"
-import { FilterStatus } from "../../types/PlaylistLibraryTypes";
+import { changeFilterStatus } from "../../../redux/slices/LibrarySlice"
+import { FilterStatus } from "../../../types/PlaylistLibraryTypes";
 const LibrarySearchBox = () =>{
     const [searchBoxIsActive, setSearchBoxIsActive] = useState(false);
     const [isFilterButtonActive, setIsFilterButtonActive] = useState(false);

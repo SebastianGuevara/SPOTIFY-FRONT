@@ -1,9 +1,9 @@
-import { HeaderContentButton } from "../common/Buttons";
-import { LibraryPlusUnfoldedContainer, LibraryTitleContainer } from "../common/Containers"
+import { HeaderContentButton } from "../../common/Buttons";
+import { LibraryPlusUnfoldedContainer, LibraryTitleContainer } from "../../common/Containers"
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { PlusLibraryIcon } from "../common/Icons";
+import { PlusLibraryIcon } from "../../common/Icons";
 import { useState } from "react";
-import { LibraryPlusList } from "../common/Lists";
+import { LibraryPlusList } from "../../common/Lists";
 import OutsideClickHandler from "react-outside-click-handler";
 const LibraryTitle = () =>{
     const [isPlusUnfolded, setIsPlusUnfolded] = useState(false);

@@ -9,7 +9,7 @@ justify-content: center;
 align-items: flex-start;
 background-color: ${props => props.color?props.color:'#000000'};
 `
-export const DashboardContentContainer = styled.main`
+export const DashboardContainer = styled.main`
 width: 100%;
 height: calc(100% - 80px);
 padding: 8px;
@@ -18,7 +18,7 @@ display: flex;
 gap: 8px;
 `
 
-export const SidebarContainer = styled.aside`
+export const SidebarContainer = styled.nav`
 height: 100%;
 max-width: 420px;
 min-width: 360px;
@@ -27,11 +27,12 @@ display: flex;
 flex-direction: column;
 gap: 8px;
 `
-export const DashboardPlaylistContainer = styled.div`
+export const DashboardContentContainer = styled.div`
 background-color: #121212;
 width: 78%;
 height: 100%;
 border-radius: 8px;
+overflow: hidden;
 `
 export const MainOptionsContainer = styled.div`
 background-color: #121212;
@@ -177,4 +178,25 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 color: #FFFFFF;
+`
+export const DashboardContentHeaderContainer = styled.header`
+background-color: red;
+width: 100%;
+height: 64px;
+display: flex;
+align-items: center;
+padding: 0px 20px;
+box-sizing: border-box;
+position: relative;
+`
+export const DashboardContentTitleContainer = styled.article`
+background-color: yellow;
+height: 276px;
+width: 100%;
+display: flex;
+align-items: flex-start;
+justify-content: flex-end;
+`
+export const DashboardContentTitleContentContainer = styled.section`
+
 `

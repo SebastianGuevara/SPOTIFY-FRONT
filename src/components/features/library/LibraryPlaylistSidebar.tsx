@@ -1,8 +1,8 @@
-import { LibraryPlaylistSidebarContainer, LibraryPlaylistSidebarTextContainer } from "../common/Containers"
-import { LibraryArtistsImage, LibraryPlaylistImage } from "../common/Images";
-import PlaceholderImage1 from "../../assets/placeholder1.png"
-import { LibraryPlaylistSidebarType } from "../../types/PlaylistLibraryTypes";
-import { LibraryContentSubtitleText, LibraryContentTitleText } from "../common/Text";
+import { LibraryPlaylistSidebarContainer, LibraryPlaylistSidebarTextContainer } from "../../common/Containers"
+import { LibraryArtistsImage, LibraryPlaylistImage } from "../../common/Images";
+import PlaceholderImage1 from "../../../assets/placeholder1.png"
+import { LibraryPlaylistSidebarType } from "../../../types/PlaylistLibraryTypes";
+import { LibraryContentSubtitleText, LibraryContentTitleText } from "../../common/Text";
 
 const LibraryPlaylistSidebar = (props:LibraryPlaylistSidebarType) =>{
     const { imgSrc, title, subTitle } = props;

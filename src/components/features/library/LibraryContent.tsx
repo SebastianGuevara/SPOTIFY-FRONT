@@ -1,9 +1,9 @@
-import { getUserFollowedArtist, getUserLikedSongs, getUserPlaylists, getUserSavedAlbums } from "../../services/GetUserLibrary"
-import { LibraryContentContainer } from "../common/Containers"
+import { getUserFollowedArtist, getUserLikedSongs, getUserPlaylists, getUserSavedAlbums } from "../../../services/GetUserLibrary"
+import { LibraryContentContainer } from "../../common/Containers"
 import LibraryPlaylistSidebar from "./LibraryPlaylistSidebar"
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import { setNewAccesToken } from "../../redux/slices/AuthenticationSlice"
+import { setNewAccesToken } from "../../../redux/slices/AuthenticationSlice"
 
 const LibraryContent:React.FC = () =>{
     const [albums, setAlbums] = useState<any>(null);
@@ -17,7 +17,7 @@ const LibraryContent:React.FC = () =>{
     const libraryState = useSelector((state:any) => state.library)
     const dispatch = useDispatch();
     useEffect(()=>{
-        handleLibraryLoad(auth.accessToken, auth.refreshToken);
+        if(!library)handleLibraryLoad(auth.accessToken, auth.refreshToken);
     },[])
 
     useEffect(()=>{
@@ -32,9 +32,6 @@ const LibraryContent:React.FC = () =>{
                 setLibrary(completeLibrary);
             }
         }
-
-
-
     },[libraryState.buttonsStatus])
 
     useEffect(()=>{

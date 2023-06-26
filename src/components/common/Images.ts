@@ -14,3 +14,9 @@ export const NotFoundLogo = styled.img`
 height: 60px;
 width: 60px;
 `
+export const UserProfileImage = styled.img`
+height: 100%;
+width: auto;
+object-fit: contain;
+border-radius: 999px;
+`

@@ -37,7 +37,13 @@ const Login:React.FC = () => {
         }
         else{
             const { id,display_name,email,followers,images } = await getUserData(accessToken, refreshToken);
-            dispatch(setUserData({id: id, name: display_name, email: email, followers: followers.total, image:images[0].url}));
+            if(images[0]){
+                dispatch(setUserData({id: id, name: display_name, email: email, followers: followers.total, image:images[0].url}));
+            }
+            else{
+                dispatch(setUserData({id: id, name: display_name, email: email, followers: followers.total, image:null}));
+            }
+            
         }
     }
     return(
