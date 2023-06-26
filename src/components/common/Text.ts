@@ -24,3 +24,23 @@ export const HelpNotFountText = styled.a`
     text-decoration: underline;
 }
 `
+export const DashboardTitleText = styled.h1`
+text-overflow: ellipsis;
+overflow: hidden;
+margin: 0;
+font-weight: 900;
+`
+export const DashboardTitleSubtitle = styled.span`
+display: inline-block;
+line-height: 1.5;
+font-family: Circular-Ligth;
+font-size: 0.9rem;
+a{
+    &:hover{
+        text-decoration: underline;
+    }
+}
+span{
+    color: rgba(255,255,255,0.7)
+}
+`

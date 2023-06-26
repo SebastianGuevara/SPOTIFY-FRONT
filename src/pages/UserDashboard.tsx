@@ -9,6 +9,8 @@ import ContentTitle from '../components/features/content/ContentTitle';
 import { getUserData } from '../services/GetUserData';
 import { setNewAccesToken } from '../redux/slices/AuthenticationSlice';
 import { setUserData } from '../redux/slices/UserSlice';
+import Color from 'color-thief-react';
+import ContentPlaylistTracks from '../components/features/content/ContentPlaylistTracks';
 
 const UserDashboard: React.FC = () =>{
     const location = useLocation();
@@ -48,10 +50,16 @@ const UserDashboard: React.FC = () =>{
                 <Header location = {location.pathname}/>
                 <Library/>
             </SidebarContainer>
-            <DashboardContentContainer>
-                <ContentHeader/>
-                <ContentTitle/>
-            </DashboardContentContainer>
+            <Color format='hex' crossOrigin="anonymous" src={'https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72'}>
+                {({data})=>(
+                    <DashboardContentContainer color={data}>
+                        <ContentHeader/>
+                        <ContentTitle/>
+                        <ContentPlaylistTracks/>
+                    </DashboardContentContainer>
+                )}
+            </Color>
+
         </DashboardContainer>
     )
 }
