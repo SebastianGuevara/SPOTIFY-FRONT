@@ -23,12 +23,17 @@ border-radius: 999px;
 
 `
 export const DahsboardContentTitleImage = styled.img`
-height: 192px;
-width: 192px;
+height: 232px;
+width: 232px;
 display: inline-flexs;
 align-items: center;
 justify-content: center;
 box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+
+@media (max-width: 1280px) {
+    height: 192px;
+    width: 192px;
+}
 `
 
 export const CreatorProfileImage = styled(UserProfileImage)`

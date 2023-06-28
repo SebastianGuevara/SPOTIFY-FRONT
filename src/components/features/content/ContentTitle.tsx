@@ -1,6 +1,6 @@
 import { DahsboardContentTitleSubtitleContainer, DashboardContentTitleContainer, DashboardContentTitleContentContainer, DashboardContentTitleTextContaienr } from "../../common/Containers"
 import { CreatorProfileImage, DahsboardContentTitleImage } from "../../common/Images";
-import { DashboardTitleSubtitle, DashboardTitleText } from "../../common/Text";
+import { DashboardSubtitle, DashboardTitleSubtitle, DashboardTitleText } from "../../common/Text";
 import { useSelector } from "react-redux";
 
 
@@ -14,6 +14,7 @@ const ContentTitle: React.FC = () => {
                 <DashboardContentTitleTextContaienr>
                     <span>Lista</span>
                     <DashboardTitleText>Tu top de canciones 2022</DashboardTitleText>
+                    <DashboardSubtitle>Tu año en Spotify te muestra las canciones que más te gustaron este año.</DashboardSubtitle>
                     <DahsboardContentTitleSubtitleContainer>
 
                         <DashboardTitleSubtitle>

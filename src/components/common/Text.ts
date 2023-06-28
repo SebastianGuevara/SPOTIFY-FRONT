@@ -28,7 +28,13 @@ export const DashboardTitleText = styled.h1`
 text-overflow: ellipsis;
 overflow: hidden;
 margin: 0;
-font-weight: 900;
+font-size: 5vw;
+font-family: Circular-bold;
+`
+export const DashboardSubtitle = styled.span`
+font-family: Circular-Ligth;
+color: rgba(255,255,255,0.7);
+font-size: 0.8rem;
 `
 export const DashboardTitleSubtitle = styled.span`
 display: inline-block;
@@ -36,11 +42,12 @@ line-height: 1.5;
 font-family: Circular-Ligth;
 font-size: 0.9rem;
 a{
+    font-family: Circular-Bold;
     &:hover{
         text-decoration: underline;
     }
 }
 span{
-    color: rgba(255,255,255,0.7)
+    color: rgba(255,255,255,0.7);
 }
 `

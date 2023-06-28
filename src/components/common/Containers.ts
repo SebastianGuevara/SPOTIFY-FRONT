@@ -193,28 +193,32 @@ height: 276px;
 width: 100%;
 display: flex;
 align-items: flex-end;
-justify-content: flex-start;
-padding: 10px 15px;
+justify-content: flex-end;
 box-sizing: border-box;
+padding: 0px 0px 22px 22px;
 `
 export const DashboardContentTitleContentContainer = styled.section`
 height: 230px;
 width: 100%;
 display: flex;
 flex-direction: row;
-align-items: center;
+align-items: flex-end;
 justify-content: flex-start;
-/* overflow: hidden; */
 
 `
 export const DashboardContentTitleTextContaienr = styled.div`
 height: auto;
+max-height: 135%;
 max-width: calc(100%-192px);
 font-family: Circular;
 color: #FFFFFF;
 text-overflow: ellipsis;
 overflow: hidden;
 margin-left: 20px;
+box-sizing: border-box;
+gap: 10px;
+display: flex;
+flex-direction: column;
 `
 export const DahsboardContentTitleSubtitleContainer = styled.div`
 width: 100%;
@@ -224,8 +228,8 @@ align-items: center;
 justify-content: flex-start;
 `
 export const DashboardContentPlayerContainer = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 0.8; 
+background-color: rgba(0, 0, 0, 0.2);
+opacity: 0.8; 
 width: 100%;
 height: 100%;
 `
