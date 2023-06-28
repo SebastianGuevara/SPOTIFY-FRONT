@@ -22,10 +22,10 @@ const PrincipalUserDashboard:React.FC = () =>{
                 )}
             </Color>:null}
             {('/'===location.pathname)?<DashboardContentContainer color="#211840">
-
+                <ContentHeader/>
             </DashboardContentContainer>:null}
             {('/search'===location.pathname)?<DashboardContentContainer color="#121212">
-
+                <ContentHeader/>
             </DashboardContentContainer>:null}
         </>
 

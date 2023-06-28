@@ -4,15 +4,17 @@ import { DashboardContentHeaderContainer } from "../../common/Containers"
 import { useSelector } from "react-redux";
 import { useEffect } from "react"
 import { UserProfileImage } from "../../common/Images";
+import { useNavigate } from "react-router-dom";
 
 const ContentHeader:React.FC = () => {
     const user = useSelector((state:any) => state.user);
+    const navigate = useNavigate();
     useEffect(()=>{
         console.log(user);
     },[])
     return(
         <DashboardContentHeaderContainer>
-            <BackButton>
+            <BackButton onClick={()=>navigate(-1)}>
                 <Icon icon="ep:arrow-left" height="80px" width="80px"/>
             </BackButton>
             <ProfileButton>
