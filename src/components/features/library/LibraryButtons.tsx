@@ -19,31 +19,31 @@ const LibraryButtons: React.FC = () => {
                 </LibraryXButton>  
             </>:null}
             {(library.buttonsStatus==='None')?<>
-                <LibraryButton onClick={()=>handleButtonPressed("Playlists")} >
+                <LibraryButton onClick={()=>handleButtonPressed("playlist")} >
                     <span>Playlists</span>
                 </LibraryButton>
-                <LibraryButton onClick={()=>handleButtonPressed("Artists")}>
+                <LibraryButton onClick={()=>handleButtonPressed("artist")}>
                     <span>Artistas</span>
                 </LibraryButton>
-                <LibraryButton onClick={()=>handleButtonPressed("Albums")}>
+                <LibraryButton onClick={()=>handleButtonPressed("album")}>
                     <span>Álbumes</span>
                 </LibraryButton>
             </>:null}
-            {(library.buttonsStatus==='Albums')?
+            {(library.buttonsStatus==='album')?
             <>
                 <SelectedLibraryButton onClick={()=>handleButtonPressed("None")}>
                     <span>Álbumes</span>
                 </SelectedLibraryButton>
             </>:null}
-            {(library.buttonsStatus==='Artists')?<>
+            {(library.buttonsStatus==='artist')?<>
                 <SelectedLibraryButton onClick={()=>handleButtonPressed("None")}>
                     <span>Artistas</span>
                 </SelectedLibraryButton>
             </>:null}
-            {(library.buttonsStatus==='Playlists')?
+            {(library.buttonsStatus==='playlist')?
             <>
                 <SelectedLibraryButton onClick={()=>handleButtonPressed("None")}>
-                    <span>Playlists</span>
+                    <span>playlist</span>
                 </SelectedLibraryButton>
             </>:null}
         </LibraryButtonsContainer>

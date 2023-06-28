@@ -67,7 +67,7 @@ const LibraryContent:React.FC = () =>{
                     subTitle: `Álbum · ${album.album.artists[0].name}`,
                     image: album.album.images[2].url,
                     addedAt: album.added_at,
-                    type: "Albums"
+                    type: "album"
                 }
             )
         })
@@ -79,7 +79,7 @@ const LibraryContent:React.FC = () =>{
                     subTitle:"Artista",
                     image: artist.images[2].url,
                     addedAt: null,
-                    type: "Artists"
+                    type: "artist"
                 }
             )
         })
@@ -91,7 +91,7 @@ const LibraryContent:React.FC = () =>{
                     subTitle: `Lista · ${playlist.owner.display_name}`,
                     image: playlist.images[0].url,
                     addedAt: null,
-                    type: "Playlists"
+                    type: "playlist"
                 }
             )
         })
@@ -101,7 +101,7 @@ const LibraryContent:React.FC = () =>{
             subTitle:`Lista · ${likedSongs.total} canciones`,
             image: null,
             addedAt: null,
-            type: "Playlists"
+            type: "playlist"
         }]
 
         setLibrary([...formatedAlbums,...formatedArtist,...formatePlaylists,...formatedLikedSongs])
