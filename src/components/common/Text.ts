@@ -33,7 +33,7 @@ export const DashboardTitleText = styled.h1`
 text-overflow: ellipsis;
 overflow: hidden;
 margin: 0;
-font-size: 5vw;
+font-size: 4vw;
 font-family: Circular-bold;
 `
 export const DashboardSubtitle = styled.span`

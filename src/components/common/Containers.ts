@@ -28,7 +28,7 @@ flex-direction: column;
 gap: 8px;
 `
 export const DashboardContentContainer = styled.div`
-background: linear-gradient(0deg, #1A1A1A 30%, ${props=>props.color} 100%);
+background: linear-gradient(0deg, #121212 30%, ${props=>props.color} 100%);
 width: 78%;
 height: 100%;
 border-radius: 8px;

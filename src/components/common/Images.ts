@@ -25,6 +25,7 @@ border-radius: 999px;
 export const DahsboardContentTitleImage = styled.img`
 height: 232px;
 width: 232px;
+object-fit: cover;
 display: inline-flexs;
 align-items: center;
 justify-content: center;
@@ -38,5 +39,6 @@ box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
 
 export const CreatorProfileImage = styled(UserProfileImage)`
 vertical-align: middle;
+object-fit: cover;
 margin-right: 5px;
 `

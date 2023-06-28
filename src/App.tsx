@@ -13,6 +13,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/playlist/:id" element={<UserDashboard/>}/>
+          <Route path="/album/:id" element={<UserDashboard/>}/>
+          <Route path="/artist/:id" element={<UserDashboard/>}/>
           <Route path="/search" element={<UserDashboard/>}/>
           <Route path="/" element={<UserDashboard/>}/>
           <Route path="*" element={<NotFound/>}/>

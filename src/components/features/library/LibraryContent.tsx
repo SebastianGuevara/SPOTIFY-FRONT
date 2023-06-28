@@ -4,6 +4,8 @@ import LibraryPlaylistSidebar from "./LibraryPlaylistSidebar"
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { setNewAccesToken } from "../../../redux/slices/AuthenticationSlice"
+import notImage from "../../../assets/notImage.png"
+import { Link } from "react-router-dom"
 
 const LibraryContent:React.FC = () =>{
     const [albums, setAlbums] = useState<any>(null);
@@ -89,7 +91,7 @@ const LibraryContent:React.FC = () =>{
                     id: playlist.id,
                     title: playlist.name,
                     subTitle: `Lista · ${playlist.owner.display_name}`,
-                    image: playlist.images[0].url,
+                    image: (playlist.images.length>0)?playlist.images[0].url:notImage,
                     addedAt: null,
                     type: "playlist"
                 }
@@ -112,7 +114,9 @@ const LibraryContent:React.FC = () =>{
         <LibraryContentContainer>
             {
                 library&&library.map((item:any, key:number)=>(
-                    <LibraryPlaylistSidebar key={key} imgSrc={item.image} title={item.title} subTitle={item.subTitle}/>
+                    <Link to={`/${item.type}/${item.id}`}>
+                        <LibraryPlaylistSidebar key={key} imgSrc={item.image} title={item.title} subTitle={item.subTitle}/>
+                    </Link>                   
                 ))
             }
         </LibraryContentContainer>

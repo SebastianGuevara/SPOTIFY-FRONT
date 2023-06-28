@@ -1,16 +1,13 @@
-import { DashboardContainer, DashboardContentContainer, SidebarContainer } from '../components/common/Containers'
+import { DashboardContainer, SidebarContainer } from '../components/common/Containers'
 import Header from '../components/features/Header';
 import Library from '../components/features/library/PlaylistLibrary';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react'
-import ContentHeader from '../components/features/content/ContentHeader';
-import ContentTitle from '../components/features/content/ContentTitle';
 import { getUserData } from '../services/GetUserData';
 import { setNewAccesToken } from '../redux/slices/AuthenticationSlice';
 import { setUserData } from '../redux/slices/UserSlice';
-import Color from 'color-thief-react';
-import ContentPlaylistTracks from '../components/features/content/ContentPlaylistTracks';
+import PrincipalUserDashboard from '../components/features/content/PrincipalUserDashboard';
 
 const UserDashboard: React.FC = () =>{
     const location = useLocation();
@@ -50,16 +47,7 @@ const UserDashboard: React.FC = () =>{
                 <Header location = {location.pathname}/>
                 <Library/>
             </SidebarContainer>
-            <Color format='hex' crossOrigin="anonymous" src={'https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72'}>
-                {({data})=>(
-                    <DashboardContentContainer color={data}>
-                        <ContentHeader/>
-                        <ContentTitle/>
-                        <ContentPlaylistTracks/>
-                    </DashboardContentContainer>
-                )}
-            </Color>
-
+            <PrincipalUserDashboard/>
         </DashboardContainer>
     )
 }
