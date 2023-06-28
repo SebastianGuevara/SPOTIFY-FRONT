@@ -17,6 +17,7 @@ const LibraryContent:React.FC = () =>{
     const libraryState = useSelector((state:any) => state.library)
     const dispatch = useDispatch();
     useEffect(()=>{
+        console.log(library);
         if(!library)handleLibraryLoad(auth.accessToken, auth.refreshToken);
     },[])
 
@@ -61,6 +62,7 @@ const LibraryContent:React.FC = () =>{
         const formatedAlbums = albums.map((album:any) =>{
             return(
                 {
+                    id:album.album.id,
                     title:album.album.name,
                     subTitle: `Álbum · ${album.album.artists[0].name}`,
                     image: album.album.images[2].url,
@@ -72,6 +74,7 @@ const LibraryContent:React.FC = () =>{
         const formatedArtist = artists.map((artist:any) =>{
             return(
                 {
+                    id:artist.id,
                     title:artist.name,
                     subTitle:"Artista",
                     image: artist.images[2].url,
@@ -83,6 +86,7 @@ const LibraryContent:React.FC = () =>{
         const formatePlaylists = playlists.map((playlist:any)=>{
             return(
                 {
+                    id: playlist.id,
                     title: playlist.name,
                     subTitle: `Lista · ${playlist.owner.display_name}`,
                     image: playlist.images[0].url,
@@ -92,6 +96,7 @@ const LibraryContent:React.FC = () =>{
             )
         })
         const formatedLikedSongs = [{
+            id: "tracks",
             title:"Tus me gusta",
             subTitle:`Lista · ${likedSongs.total} canciones`,
             image: null,

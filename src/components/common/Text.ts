@@ -24,6 +24,11 @@ export const HelpNotFountText = styled.a`
     text-decoration: underline;
 }
 `
+
+export const DashboardTypeText = styled.span`
+font-family: Circular-bold;
+font-size: 0.9rem;
+`
 export const DashboardTitleText = styled.h1`
 text-overflow: ellipsis;
 overflow: hidden;

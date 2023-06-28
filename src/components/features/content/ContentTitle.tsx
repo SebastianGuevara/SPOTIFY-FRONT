@@ -1,6 +1,6 @@
 import { DahsboardContentTitleSubtitleContainer, DashboardContentTitleContainer, DashboardContentTitleContentContainer, DashboardContentTitleTextContaienr } from "../../common/Containers"
 import { CreatorProfileImage, DahsboardContentTitleImage } from "../../common/Images";
-import { DashboardSubtitle, DashboardTitleSubtitle, DashboardTitleText } from "../../common/Text";
+import { DashboardSubtitle, DashboardTitleSubtitle, DashboardTitleText, DashboardTypeText } from "../../common/Text";
 import { useSelector } from "react-redux";
 
 
@@ -12,7 +12,7 @@ const ContentTitle: React.FC = () => {
             <DashboardContentTitleContentContainer>
                 <DahsboardContentTitleImage src="https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72" alt="Dashboard principal image"/>
                 <DashboardContentTitleTextContaienr>
-                    <span>Lista</span>
+                    <DashboardTypeText>Lista</DashboardTypeText>
                     <DashboardTitleText>Tu top de canciones 2022</DashboardTitleText>
                     <DashboardSubtitle>Tu año en Spotify te muestra las canciones que más te gustaron este año.</DashboardSubtitle>
                     <DahsboardContentTitleSubtitleContainer>
