@@ -24,3 +24,12 @@ transition: 0.3s;
     background-color: #1A1A1A;
 }
 `
+export const HeartIcon = styled(Icon)`
+color:#A7A7A7;
+cursor:pointer;
+
+&:hover{
+    scale:1.05;
+    color: white;
+}
+`

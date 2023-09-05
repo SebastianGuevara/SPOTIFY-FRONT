@@ -146,3 +146,18 @@ background-color: rgba(0,0,0,0.6);
     background-color: rgba(0,0,0,0.75);
 }
 `
+export const PlayPlaylistButton = styled.button`
+background-color: #1ED760;
+height: 56px;
+width: 56px;
+border: none;
+border-radius:999px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+
+&:hover{
+    scale:1.05;
+}
+`

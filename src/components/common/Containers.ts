@@ -233,3 +233,13 @@ opacity: 0.8;
 width: 100%;
 height: 100%;
 `
+export const DashboardContentPlayContainer = styled.div`
+height: 88px;
+width: 100%;
+padding: 16px;
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 25px;
+`
